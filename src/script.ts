@@ -20,7 +20,7 @@ const state: TimerState = {
 };
 
 
-// проверка состояния старта
+// проверка состояния старта/обнуление и обновление таймера
 function handleStart(){
 
     if(state.intervalId || state.timeLeft <= 0) return;  
@@ -42,3 +42,10 @@ function updateDisplay(){
     const seconds = Math.floor(state.timeLeft%60).toString().padStart(2, '0');
     timer.textContent = `${minutes}:${seconds}`;
 };
+
+
+// обработчики событий для кнопок 
+
+startBtn.addEventListener('click', handleStart);
+pauseBtn.addEventListener('click', handlePause);
+stopBtn.addEventListener('click', handleStop);
