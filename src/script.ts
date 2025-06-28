@@ -99,3 +99,6 @@ startBtn.addEventListener('click',()=>{
 })
 pauseBtn.addEventListener('click', handlePause);
 skipBtn.addEventListener('click', handleSkip);
+
+
+// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).
