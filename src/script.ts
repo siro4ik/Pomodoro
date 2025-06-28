@@ -54,6 +54,8 @@ function handlePause(){
 // кнопка пропуска фазы
 function handleSkip(){
 
+    if(!state.intervalId) return;
+
     if(state.phase == 'break'){
         state.phase = 'work';
         state.timeLeft = WORK_TIME;
