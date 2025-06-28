@@ -49,6 +49,8 @@ function handlePause(){
     clearInterval(state.intervalId);
     state.intervalId = null;
 
+    document.body.classList.remove('dark-theme');
+
 }
 
 // кнопка пропуска фазы
@@ -70,7 +72,7 @@ function handleSkip(){
     state.isPaused = false;
     updateDisplay();
 
-
+    document.body.classList.remove('dark-theme');
 }
 
 // высчитывание секунд и минут с послед. преобразованием
@@ -80,9 +82,20 @@ function updateDisplay(){
     timer.textContent = `${minutes}:${seconds}`;
 };
 
+function startTheme(){
+    if(state.phase == 'work' || state.phase == 'break'){
+        document.body.classList.add('dark-theme')
+    }else{
+        document.body.classList.remove('dark-theme')
+    }
+}
+
 
 // обработчики событий для кнопок 
 
-startBtn.addEventListener('click', handleStart);
+startBtn.addEventListener('click',()=>{
+    startTheme();
+    handleStart();
+})
 pauseBtn.addEventListener('click', handlePause);
 skipBtn.addEventListener('click', handleSkip);
