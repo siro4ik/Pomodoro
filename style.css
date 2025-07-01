@@ -12,7 +12,7 @@ body{
 
 .dark-theme{
     transition: 0.4s ease;
-    background: #141414af;
+    background: #141414f0;
     color: white;
 }
 
@@ -43,6 +43,7 @@ main{
 
 h1{
     font-size: 4rem;
+    
 }
 
 .pomodoro-container{
@@ -70,7 +71,7 @@ h1{
 }
 
 .hover-controls:hover{
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: rgba(0, 0, 0, 0.909);
     color: aliceblue;
 }
 
