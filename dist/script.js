@@ -11,6 +11,9 @@ if (!pauseBtn)
 const skipBtn = document.querySelector('.skip-btn');
 if (!skipBtn)
     throw new Error("Кнопка пропуска не обнаружена");
+const modalWindow = document.querySelector('.setting-btn');
+if (!modalWindow)
+    throw new Error("Кнопка настроек не обнаружена");
 const WORK_TIME = 25 * 60;
 const BREAK_TIME = 5 * 60;
 const state = {
@@ -80,3 +83,27 @@ startBtn.addEventListener('click', () => {
 });
 pauseBtn.addEventListener('click', handlePause);
 skipBtn.addEventListener('click', handleSkip);
+// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).
+// Модальное окно
+// const modalWindow = document.querySelector('.setting-btn') as HTMLElement;
+function closeModal() {
+    var _a;
+    (_a = document.querySelector('.modalWrapper')) === null || _a === void 0 ? void 0 : _a.remove();
+}
+function openSettingsModal() {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'modalWrapper';
+    const backdrop = document.createElement('div');
+    backdrop.className = 'backdrop';
+    backdrop.addEventListener('click', closeModal);
+    wrapper.appendChild(backdrop);
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modalWindow';
+    const title = document.createElement('h2');
+    title.textContent = 'Настройки таймера';
+    modalContent.appendChild(title);
+    // поля для настройки времени будут тута 
+    //кнопки
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'modal-buttons';
+}
