@@ -83,7 +83,6 @@ startBtn.addEventListener('click', () => {
 });
 pauseBtn.addEventListener('click', handlePause);
 skipBtn.addEventListener('click', handleSkip);
-// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).
 // Модальное окно
 // const modalWindow = document.querySelector('.setting-btn') as HTMLElement;
 function closeModal() {
@@ -107,3 +106,7 @@ function openSettingsModal() {
     const buttonsContainer = document.createElement('div');
     buttonsContainer.className = 'modal-buttons';
 }
+document.addEventListener('DOMContentLoaded', () => {
+    modalWindow === null || modalWindow === void 0 ? void 0 : modalWindow.addEventListener('click', openSettingsModal);
+});
+// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).

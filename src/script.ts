@@ -135,9 +135,11 @@ function openSettingsModal(){
     //кнопки
     const buttonsContainer = document.createElement('div');
     buttonsContainer.className = 'modal-buttons';
-
-
 }
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    modalWindow?.addEventListener('click', openSettingsModal);
+});
 
 
 // Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).
