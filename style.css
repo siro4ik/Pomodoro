@@ -18,7 +18,7 @@ body{
 }
 
 /* SVG */
-.settings-btn {
+.setting-btn {
   width: 50px;
   height: 50px;
   border: none;
@@ -31,7 +31,7 @@ body{
   place-items: center;
 }
 
-.settings-btn:hover {
+.setting-btn:hover {
   transform: rotate(60deg);
 }
 

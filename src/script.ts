@@ -113,6 +113,7 @@ function openSettingsModal(){
 
     const wrapper = document.createElement('div');
     wrapper.className = 'modalWrapper';
+    document.body.appendChild(wrapper);
 
     const backdrop = document.createElement('div');
     backdrop.className = 'backdrop';
