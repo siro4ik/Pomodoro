@@ -23,7 +23,7 @@
   padding: 20px;
   border-radius: 8px;
   min-width: 300px;
-  z-index: 1001;
+  z-index: 1005;
 }
 
 .modal-buttons {
@@ -32,5 +32,7 @@
   gap: 10px;
   margin-top: 20px;
 }
+
+
 
 /* настройки кнопок */

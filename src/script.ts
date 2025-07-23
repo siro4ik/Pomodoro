@@ -122,7 +122,8 @@ function openSettingsModal(){
 
     const modalContent = document.createElement('div');
     modalContent.className = 'modalWindow';
-
+    wrapper.appendChild (modalContent);
+ 
     const title = document.createElement('h2');
     title.textContent = 'Настройки таймера';
     modalContent.appendChild(title);

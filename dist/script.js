@@ -99,6 +99,7 @@ function openSettingsModal() {
     wrapper.appendChild(backdrop);
     const modalContent = document.createElement('div');
     modalContent.className = 'modalWindow';
+    wrapper.appendChild(modalContent);
     const title = document.createElement('h2');
     title.textContent = 'Настройки таймера';
     modalContent.appendChild(title);
@@ -110,4 +111,4 @@ function openSettingsModal() {
 document.addEventListener('DOMContentLoaded', () => {
     modalWindow === null || modalWindow === void 0 ? void 0 : modalWindow.addEventListener('click', openSettingsModal);
 });
-// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени).
+// Добавить алерт, выбор времени (work phase, break phase), добавить длинный перерыв (выбор времени). Выборка цвета/шрифта в модальном окне.
